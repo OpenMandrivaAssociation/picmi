@@ -1,5 +1,5 @@
 Name:		picmi
-Version:	4.14.2
+Version:	4.14.3
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
@@ -34,6 +34,9 @@ hidden picture.
 
 
 %changelog
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.3-1
+- New version 4.14.3
+
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.2-1
 - New version 4.14.2
 
