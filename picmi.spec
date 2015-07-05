@@ -1,5 +1,5 @@
 Name:		picmi
-Version:	15.04.2
+Version:	15.04.3
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
