@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   picmi-15.04.3.tar.xz: 2149e241fa227e572a24066433486f810b77d243
+sources:
+  picmi-15.08.1.tar.xz: 8147dc7972c949b96e52a67af9172e74c4971eda
