@@ -41,20 +41,20 @@ left blank according to numbers given at the side of the grid to reveal a
 hidden picture.
 
 %files
-%{_bindir}/picmi                                                                                       
+%{_bindir}/picmi
 %{_datadir}/applications/org.kde.picmi.desktop
 %{_datadir}/kxmlgui5/picmi
 %{_datadir}/picmi
-%{_datadir}/appdata/picmi.appdata.xml
-%{_iconsdir}/hicolor/*/apps/picmi.*                                                                    
+%{_datadir}/appdata/org.kde.picmi.appdata.xml
+%{_iconsdir}/hicolor/*/apps/picmi.*
 %doc %{_docdir}/HTML/en/picmi
 #------------------------------------------------------------------------------
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
 %ninja
 
 %install
