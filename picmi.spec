@@ -1,6 +1,6 @@
 Name:		picmi
 Version:	15.12.3
-Release:	1
+Release:	2
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
