@@ -46,7 +46,7 @@ hidden picture.
 %{_datadir}/applications/org.kde.picmi.desktop
 %{_datadir}/kxmlgui5/picmi
 %{_datadir}/picmi
-%{_datadir}/appdata/org.kde.picmi.appdata.xml
+%{_datadir}/metainfo/org.kde.picmi.appdata.xml
 %{_iconsdir}/hicolor/*/apps/picmi.*
 %doc %{_docdir}/HTML/en/picmi
 #------------------------------------------------------------------------------
