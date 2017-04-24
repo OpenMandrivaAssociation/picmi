@@ -1,11 +1,11 @@
 Name:		picmi
-Version:	16.12.2
+Version:	17.04.0
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://games.kde.org/game.php?game=picmi
-Source:		http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires: 	cmake(KF5KDEGames)
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(Qt5Gui)
@@ -41,14 +41,13 @@ Picmi is a number logic game in which cells in a grid have to be colored or
 left blank according to numbers given at the side of the grid to reveal a
 hidden picture.
 
-%files
+%files -f %{name}.lang
 %{_bindir}/picmi
 %{_datadir}/applications/org.kde.picmi.desktop
 %{_datadir}/kxmlgui5/picmi
 %{_datadir}/picmi
 %{_datadir}/metainfo/org.kde.picmi.appdata.xml
 %{_iconsdir}/hicolor/*/apps/picmi.*
-%doc %{_docdir}/HTML/en/picmi
 #------------------------------------------------------------------------------
 
 %prep
@@ -60,4 +59,4 @@ hidden picture.
 
 %install
 %ninja_install -C build
-
+%find_lang %{name} --with-html
