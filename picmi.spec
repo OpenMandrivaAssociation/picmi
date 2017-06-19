@@ -1,5 +1,5 @@
 Name:		picmi
-Version:	17.04.0
+Version:	17.04.2
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
