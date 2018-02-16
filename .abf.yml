@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   picmi-17.12.1.tar.xz: 2a6309f2f1bb0767da7acff27c3e9ab591c7cfc9
+sources:
+  picmi-17.12.2.tar.xz: f30fc2959cbcc0eee925a3368d52f8ccbb62e42e
