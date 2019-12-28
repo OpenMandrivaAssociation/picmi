@@ -1,12 +1,12 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		picmi
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://games.kde.org/game.php?game=picmi
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires: 	cmake(KF5KDEGames)
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(Qt5Gui)
