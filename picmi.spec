@@ -1,6 +1,6 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		picmi
-Version:	22.08.3
+Version:	22.12.0
 Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
@@ -45,7 +45,6 @@ hidden picture.
 %files -f %{name}.lang
 %{_bindir}/picmi
 %{_datadir}/applications/org.kde.picmi.desktop
-%{_datadir}/kxmlgui5/picmi
 %{_datadir}/picmi
 %{_datadir}/metainfo/org.kde.picmi.appdata.xml
 %{_iconsdir}/hicolor/*/apps/picmi.*
