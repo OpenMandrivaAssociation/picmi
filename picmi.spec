@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		picmi
-Version:	23.08.4
-Release:	2
+Version:	23.08.5
+Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
