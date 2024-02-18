@@ -1,12 +1,19 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		plasma6-picmi
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		http://games.kde.org/game.php?game=picmi
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/picmi/-/archive/%{gitbranch}/picmi-%{gitbranchd}.tar.bz2#/picmi-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/picmi-%{version}.tar.xz
+%endif
 BuildRequires: 	cmake(KDEGames6)
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(Qt6Gui)
@@ -51,7 +58,7 @@ hidden picture.
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n picmi-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n picmi-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
