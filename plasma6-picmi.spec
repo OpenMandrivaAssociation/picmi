@@ -8,7 +8,7 @@ Release:	%{?git:0.%{git}.}1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
-Url:		http://games.kde.org/game.php?game=picmi
+Url:		https://games.kde.org/game.php?game=picmi
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/games/picmi/-/archive/%{gitbranch}/picmi-%{gitbranchd}.tar.bz2#/picmi-%{git}.tar.bz2
 %else
