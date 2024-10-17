@@ -5,7 +5,7 @@ Release:	1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
 License:	GPLv2
-Url:		http://games.kde.org/game.php?game=picmi
+Url:		https://games.kde.org/game.php?game=picmi
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires: 	cmake(KF5KDEGames)
 BuildRequires:  cmake(ECM)
