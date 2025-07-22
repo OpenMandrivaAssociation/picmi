@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Name:		picmi
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Summary:	A nonogram logic game for KDE
 Group:		Graphical desktop/KDE
@@ -43,12 +43,17 @@ BuildRequires:  cmake(KF6IconThemes)
 BuildRequires:	cmake(KF6Declarative)
 BuildRequires:	cmake(KF6CoreAddons)
 
+%rename plasma6-picmi
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Picmi is a number logic game in which cells in a grid have to be colored or
 left blank according to numbers given at the side of the grid to reveal a
 hidden picture.
 
-%files -f picmi.lang
+%files -f %{name}.lang
 %{_bindir}/picmi
 %{_datadir}/applications/org.kde.picmi.desktop
 %{_datadir}/picmi
@@ -56,17 +61,3 @@ hidden picture.
 %{_iconsdir}/hicolor/*/apps/picmi.*
 %{_datadir}/qlogging-categories6/picmi.renamecategories
 %{_datadir}/qlogging-categories6/picmi.categories
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n picmi-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang picmi --with-html
